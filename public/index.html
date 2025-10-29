@@ -11,9 +11,18 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Aditya Swami | Portfolio</title>
 
+    <!-- ✅ Google Analytics (move to top for reliability) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Y1DMTYY68" crossorigin="anonymous"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-2Y1DMTYY68', { send_page_view: true });
+    </script>
+    <!-- ✅ End Google Analytics -->
+
     <style>
       html,body{height:100%;margin:0;background:#071026;color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto}
-      /* hide helper canvas */
       #faviconCanvas{width:0;height:0;opacity:0;position:absolute;pointer-events:none}
       @media (prefers-reduced-motion: reduce){:root{--noanim:1}}
     </style>
@@ -22,7 +31,6 @@
       (function () {
         const titles = ["Aditya Swami | Portfolio","Full Stack Developer","React · Spring Boot","Creative Problem Solver"];
         const typeMs = 60, pause = 1100;
-        // tiny typewriter (respects reduced-motion)
         const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (!reduced) {
           (async function loop() {
@@ -39,7 +47,6 @@
           document.title = titles[0];
         }
 
-        // compact favicon animator (glowing orb using provided image)
         const link = document.getElementById('favicon');
         const canvas = document.createElement('canvas'); canvas.id='faviconCanvas'; canvas.width=64; canvas.height=64;
         const ctx = canvas.getContext('2d'); document.head.appendChild(canvas);
@@ -48,12 +55,10 @@
         img.onload = ()=>loaded=true;
         function frame(){
           ctx.clearRect(0,0,64,64);
-          // soft halo
           const g = ctx.createRadialGradient(32,30,6,32,32,40);
           g.addColorStop(0,'rgba(255,255,255,0.9)'); g.addColorStop(0.2,'rgba(155,92,246,0.25)');
           g.addColorStop(1,'rgba(96,165,250,0.06)');
           ctx.fillStyle=g; ctx.beginPath(); ctx.arc(32,32,28,0,Math.PI*2); ctx.fill();
-          // rotated texture
           ctx.save(); ctx.translate(32,32); ctx.rotate(a);
           if(loaded) ctx.drawImage(img,-22,-22,44,44); else {
             const f = ctx.createLinearGradient(-16,-16,16,16);
@@ -61,7 +66,6 @@
             ctx.fillStyle=f; ctx.beginPath(); ctx.arc(0,0,14,0,Math.PI*2); ctx.fill();
           }
           ctx.restore();
-          // gloss + rim
           ctx.beginPath(); ctx.ellipse(28,26,14,6, -0.4,0,Math.PI*2); ctx.fillStyle='rgba(255,255,255,0.12)'; ctx.fill();
           ctx.lineWidth=1.5; ctx.strokeStyle='rgba(255,255,255,0.06)'; ctx.beginPath(); ctx.arc(32,32,27,0,Math.PI*2); ctx.stroke();
           link.href = canvas.toDataURL('image/png');
@@ -69,27 +73,12 @@
         }
         if (!reduced) {
           frame(); const id = setInterval(frame,80);
-          // stop when page unloads
           window.addEventListener('beforeunload',()=>clearInterval(id),{passive:true});
         } else {
-          // reduced motion -> static favicon
           link.href = "%PUBLIC_URL%/programming.png";
         }
       })();
     </script>
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2Y1DMTYY68"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  // Replace G-YOUR_ID with your Measurement ID
-  gtag('config', 'G-2Y1DMTYY68', {
-    send_page_view: true
-  });
-</script>
 
   </head>
   <body>
