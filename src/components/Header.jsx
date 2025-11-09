@@ -4,7 +4,7 @@ import { useState } from 'react';
 export default function Header({ activeSection, setActiveSection }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   
-  const navItems = ['about', 'skills', 'projects', 'experience', 'contact'];
+  const navItems = ['about', 'skills', 'projects', 'certificates', 'experience', 'contact'];
 
   const handleNavClick = (item) => {
     setActiveSection(item);
