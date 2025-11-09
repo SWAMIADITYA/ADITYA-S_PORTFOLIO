@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Certificates from "./components/Certificates";
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -29,6 +30,10 @@ export default function App() {
       
       <section id="projects" className="scroll-mt-20">
         <Projects />
+      </section>
+
+      <section id="certificates" className="scroll-mt-20">
+        <Certificates />
       </section>
       
       <section id="experience" className="scroll-mt-20">
