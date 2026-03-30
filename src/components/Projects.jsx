@@ -20,12 +20,12 @@ export default function Projects() {
       image: '📊'
     },
     {
-      title: 'Novel Approach for cryptocurrency price prediction using Machine Learning',
-      desc: 'Developed a machine learning-based system to predict cryptocurrency prices using historical data and market indicators.',
-      tags: ['Python', 'Node.js', 'Sqlite3'],
-      link: '#1',
+      title: 'Weather App',
+      desc: '',
+      tags: ['HTML', 'CSS', 'JS'],
+      link: 'https://weatherwithadii.netlify.app/',
       github: '#2',
-      image: '₿'
+      image: ''
     },
      {
       title: 'ProExam – Smart Learning & NCERT Solutions Platform',
