@@ -20,9 +20,9 @@ export default function App() {
         <Hero />
       </section>
       
-      <section id="about" className="scroll-mt-20">
+      {/* <section id="about" className="scroll-mt-20">
         <About />
-      </section>
+      </section> */}
       
       <section id="skills" className="scroll-mt-20">
         <Skills />
