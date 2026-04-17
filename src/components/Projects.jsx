@@ -46,12 +46,12 @@ export default function Projects() {
     },
 
     {
-      title: 'HealthCare Mart',
-      desc: 'Comprehensive healthcare information and medical guidance for better health decisions.',
-      tags: ['HTML', 'CSS', 'JAVASCRIPT'],
-      link: 'https://swamiaditya.github.io/HealthCare_website1/',
-      github: 'https://github.com/SWAMIADITYA/Currency_Converter_App',
-      image: '⚕️'
+      title: 'TODO APP',
+      desc: 'Plan clearly. Work smart.',
+      tags: ['HTML', 'CSS', 'JAVASCRIPT', 'REACT'],
+      link: 'https://todoapp-adityas.netlify.app/',
+      github: 'https://github.com/SWAMIADITYA/TODO_APP',
+      image: ''
     },
   ];
 
